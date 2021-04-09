@@ -1,0 +1,144 @@
+
+.gnb_logo_wrap { 
+    width: 74px; 
+    height: 74px; 
+    background-color: rgb(255,255,255); 
+    position: fixed; 
+    top:50px; 
+    left:calc(50% - 37px);
+}
+
+.gnb_logo { 
+    width: 24px; 
+    height: 28px; 
+    position: absolute; 
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_wrap { 
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-image: url(../img/RoyalPalms-16__2__crop__1___1___2_.jpg);
+}
+
+#hero_title {
+    position: absolute;
+    bottom: 100px;
+    left: 250px;
+    font-size: 160px;
+    font-weight: 900;
+}
+
+/* Let's talk. */
+
+#talk {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+}
+.talk_wrap {
+    width: 1440px;
+    padding: 100px 10px;
+    margin: 0 auto 119px;
+    display: flex;
+}
+
+.talk_left {
+    width: 33.333%;
+    margin-left: 11px;
+}
+
+.talk_left_index {
+    width: 200px;
+    font-size: 22px;
+    font-weight: 700;
+    border-top: 1px solid #000;
+    line-height: 30px;
+}
+
+.talk_right {
+    width: 66.666%;
+    font-family: serif;
+}
+
+.talk_right_title {
+    width: 450px;
+    font-family: serif;
+    font-size: 56px;
+    line-height: 70px;
+    letter-spacing: -4px;
+    margin-bottom: 46px;
+}
+
+#talk_form {
+    width: 100%;
+    color: #727272;
+}
+
+#talk_form input {
+    font-family: serif;
+    font-size: 22px;
+    width: 100%;
+    height: 48px;
+    padding: 0 10px 17px;
+    line-height: 48px;
+    margin-bottom: 48px;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+#talk_form .talk_eyeborw {
+    font-family: serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #3a97f5;
+    display: none;
+}
+
+#talk_form input:focus,
+#talk_form textarea:focus {
+    outline: 0;
+    border-color: #3a97f5;
+}
+
+#talk_form input:focus::placeholder,
+#talk_form textarea:focus::placeholder {
+    color: transparent;
+}
+
+#talk_form textarea {
+    width: 100%;
+    height: 92px;
+    font-family: serif;
+    font-size: 22px;
+    padding: 16px;
+    margin-bottom: 48px;
+}
+
+#talk_form textarea::placeholder {
+    font-size: 22px;
+}
+
+.notice {
+    font-family: serif;
+    color: rgb(128,128,128);
+    font-size: 16px;
+    margin-bottom: 48px;
+}
+
+.notice a {
+    color: rgb(128,128,128);
+    text-decoration: underline;
+}
+
+button {
+    height: 84px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
