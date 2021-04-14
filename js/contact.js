@@ -69,3 +69,55 @@ document.getElementById('talk_send').addEventListener('click', function(e){
 });
 
 
+//각 도시 현재 시간
+let presentTime = new Date();
+let utcHours = presentTime.getUTCHours();
+let utcMinutes = presentTime.getUTCMinutes();
+
+//각 도시 UTC
+let atlanta = utcHours - 5 + 1;
+let bogota = utcHours - 5;
+let brooklyn = utcHours - 5 + 1;
+let chicago = utcHours - 5;
+let dc = utcHours - 5 + 1;
+let detroit = utcHours - 5 + 1;
+let london =utcHours + 1;
+let losAngeles =utcHours - 8 + 1;
+let medellin = utcHours - 5;
+let oakland =utcHours - 8 + 1;
+let singapore =utcHours + 8;
+let toronto = utcHours - 5 + 1;
+let tokyo = utcHours + 9;
+let timeArray = [atlanta,bogota,brooklyn,chicago,dc,detroit,london,losAngeles,medellin,oakland,singapore,toronto,tokyo];
+let AmPm;
+
+function time(t){
+        if(timeArray[t] < 0){
+            timeArray[t] += 24;
+        }
+        if(timeArray[t] >= 0 && timeArray[t] < 12){
+            AmPm = 'AM';
+        } else if(timeArray[t] >= 12 && timeArray[t] < 24 ){
+            AmPm = 'PM';
+        } 
+}
+
+let officeBox = document.getElementsByClassName('office-box');
+let hours = document.getElementsByClassName('hours');
+let officeBoxArray = [...officeBox];
+console.log(officeBoxArray);
+
+officeBoxArray.forEach((box, index) => {
+
+    time(index);
+
+    if(timeArray[index] >= 6 && timeArray[index] <= 18){
+        officeBoxArray[index].classList.remove('night');
+        officeBoxArray[index].classList.add('day');
+        hours[index].innerHTML = `${timeArray[index]}:${utcMinutes} ${AmPm}`;
+    } else {
+        officeBoxArray[index].classList.remove('day');
+        officeBoxArray[index].classList.add('night');
+        hours[index].innerHTML = `${timeArray[index]}:${utcMinutes} ${AmPm}`;
+    }
+});
