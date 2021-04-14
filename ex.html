@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        box-sizing: border-box;
+        width: 400px;
+        height: 100px;
+        background-color: rgb(116, 117, 113);
+        border: 10px solid rgb(20, 20, 20);
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 0 70px;
+    }
+</style>
+<body>
+    <!-- <p id="result"></p>
+    <p id="year"></p>
+    <p id="month"></p>
+    <p id="date"></p>
+    <p id="day"></p>
+    <p id="hour"></p>
+    <p id="minute"></p>
+    <p id="second"></p> -->
+
+    <p id="clock"></p>
+
+    <script>
+    // let today = new Date();//Date object
+    // document.getElementById('result').innerHTML = today;
+
+    // let year = today.getFullYear();
+    // document.getElementById('year').innerHTML = year;
+
+    // let month = today.getMonth();
+
+    // //월은 0부터 시작
+    // document.getElementById('month').innerHTML = `${month+1}월`;
+
+    // let date = today.getDate();
+    // document.getElementById('date').innerHTML = date;
+     
+    //     //요일은 0부터 시작
+    // let day = today.getDay();
+    // document.getElementById('day').innerHTML = day;
+    // let dayStr = ['일','월','화','수','목','금','토'] ; 
+
+    // let hour = today.getHours();
+    
+    // if(hour >= 0 && hour < 12) {
+    //     let am = `오전${hour}시`;
+    //     document.getElementById('hour').innerHTML = am;
+    // } else if(hour >= 12 && hour <= 24) {
+    //     if(hour == 12){
+    //         let noon = `정오${hour}시`;
+    //         document.getElementById('hour').innerHTML = noon;
+    //     } else {
+    //         let pm = `오후${hour - 12}시`;
+    //         document.getElementById('hour').innerHTML = pm;
+    //     }
+    // }
+
+    // let minute = today.getMinutes();
+    // document.getElementById('minute').innerHTML = minute;
+
+    // let second = today.getSeconds();
+    // document.getElementById('second').innerHTML = second;
+
+
+    setInterval(clock, 1000);
+
+    function clock(){
+        let today = new Date();
+        let year = today.getFullYear();
+        let month = today.getMonth();
+        let date = today.getDate();
+        let day = today.getDay();
+        let dayStr = ['일','월','화','수','목','금','토'] ;
+        let hour = today.getHours();
+        if(hour >= 0 && hour < 12) {
+                    let am = `오전${hour}시`;
+                        hour = am;
+                    } else if(hour >= 12 && hour <= 24) {
+                    if(hour == 12){
+                        let noon = `정오${hour}시`;
+                        hour = noon;
+                    } else {
+                        let pm = `오후${hour - 12}시`;
+                        hour = pm
+                    }
+                }
+            
+        let minute = today.getMinutes();
+        let second = today.getSeconds();
+        document.getElementById('clock').innerHTML = `${year}년 ${month+1}월 ${date}일 ${dayStr[day]}요일 ${hour}:${minute}분:${second}초`;
+    }
+    </script>
+</body>
+</html>

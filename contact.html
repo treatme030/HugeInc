@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Huge Inc - Contact</title>
-   <link rel="short icon" href="img/favicon.ico">
-   <link rel="stylesheet" href="css/reset_huge.css">
-   <link rel="stylesheet" href="css/common.css">
-   <link rel="stylesheet" href="css/contact.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huge Inc - Contact</title>
+    <link rel="short icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset_huge.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 <body>
-   <header>
-      <nav class="gnb">
-         <div class="gnb_logo_wrap">
-            <svg class="gnb_logo" viewBox="0 0 20 28" xmlns="http://www.w3.org/2000/svg" title="Menu">
-               <path d="M35,24H28V51h7V41h6V51h7V24H41V34H35V24Z" class="gnb_logo_path" transform="translate(-28 -24)"></path>
-            </svg>
-         </div>
-      </nav>
-   </header>
-   <main>
-      <section id="hero">
-         <div class="hero_wrap">
-            <h1 class="title" id="hero_title">Hello.</h1>
-         </div>
-      </section>
-      <section id="talk">
-         <div class="talk_wrap">
-            <div class="talk_left">
-               <h3 class="talk_left_index">Let's talk.</h3>
+    <header>
+        <nav class="gnb">
+            <div class="gnb_logo_wrap">
+                <svg class="gnb_logo" viewBox="0 0 20 28" xmlns="http://www.w3.org/2000/svg" title="Menu">
+                <path d="M35,24H28V51h7V41h6V51h7V24H41V34H35V24Z" class="gnb_logo_path" transform="translate(-28 -24)"></path>
+                </svg>
             </div>
-            <div class="talk_right">
-               <h2 class="talk_right_title">We want to get to know you.</h2>
-               <form action="" id="talk_form">
-                  <div class="name">
-                     <label class="talk_eyeborw" for="talk_name">Your name</label>
-                     <input class="talk-item" type="text" id="talk_name" name="username" placeholder="| Your name">
-                  </div>
-                  <div class="email">
-                     <label class="talk_eyeborw" for="talk_email">Your email</label>
-                     <input class="talk-item" type="email" id="talk_email" name="useremail" placeholder="| Your email">
-                  </div>
-                  <div class="conpany">
-                     <label class="talk_eyeborw" for="talk_company">Your company</label>
-                     <input class="talk-item" type="text" id="talk_company" name="usercompany" placeholder="| Your company"> 
-                  </div>
-                  <div class="message">
-                     <label class="talk_eyeborw" for="talk_message">Let us know what you're looking for and how we can help.</label>
-                     <textarea class="talk-item" name="usermessage" id="talk_message" cols="30" rows="10" placeholder="Let us know what you're looking for and how we can help."></textarea>
-                  </div>
-                  <p class="notice">Please read our <a href="">Privacy Policy</a> to see how we use your personal information.</p>
-                  <button type="submit" id="talk_send">Sendmessage</button>
-               </form>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero_wrap">
+                <h1 class="hero_title" id="hero_title">Hello.</h1>
             </div>
-         </div>    
-      </section>
-   </main>
-   <footer></footer>
-
+        </section>
+        <section id="hello">
+            <div class="inner">
+                <div class="left">
+                    <h3 class="left_index">Hello.</h3>
+                </div>
+                <div class="right">
+                    <h2 class="title">We're here for you. Say hi.</h2>
+                    <div class="contact-wrap">
+                        <div class="contact-item">
+                            <span class="contact-item_title">Become a Client.</span>
+                            <div class="contact-item_info">
+                                <a href="">+1 718 618 4724</a>
+                                <a href="">business@hugeinc.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-item_title">Media Inquiries.</span>
+                            <div class="contact-item_info">
+                                <a href="">+1 718 880 3724</a>
+                                <a href="">press@hugeinc.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-item_title">Join Huge.</span>
+                            <div class="contact-item_info">
+                                <a href="">+1 718 625 4843</a>
+                                <a href="">work@hugeinc.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-item_title">Everything Else.</span>
+                            <div class="contact-item_info">
+                                <a href="">+1 718 625 4843</a>
+                                <a href="">hello@hugeinc.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="talk">
+            <div class="inner inner-talk">
+                <div class="left">
+                    <h3 class="left_index black">Let's talk.</h3>
+                </div>
+                <div class="right" id="talkRight">
+                    <h2 class="title talk">We want to get to know you.</h2>
+                    <form action="" id="talk_form">
+                        <div class="name talk-box">
+                            <label class="talk_eyeborw" for="talk_name">
+                                Your name
+                            </label>
+                            <input class="talk-item" type="text" id="talk_name" name="username" data-tab="0">
+                            <div class="required">This is required</div>
+                        </div>
+                        <div class="email talk-box">
+                            <label class="talk_eyeborw" for="talk_email">
+                                Your email
+                            </label>
+                            <input class="talk-item" type="email" id="talk_email" name="useremail" data-tab="1">
+                            <div class="required">This is required</div>
+                        </div>
+                        <div class="conpany talk-box">
+                            <label class="talk_eyeborw" for="talk_company">
+                                Your company
+                            </label>
+                            <input class="talk-item" type="text" id="talk_company" name="usercompany" data-tab="2"> 
+                            <div class="required">This is required</div>
+                        </div>
+                        <div class="message talk-box">
+                            <label class="talk_eyeborw message-talk_eyeborw" for="talk_message">
+                                Let us know what you're looking for and how we can help.
+                            </label>
+                            <textarea class="talk-item" name="usermessage" id="talk_message" cols="30" rows="10" data-tab="3"></textarea>
+                            <div class="required">This is required</div>
+                        </div>
+                        <p class="notice">Please read our <a href="">Privacy Policy</a> to see how we use your personal information.</p>
+                        <button type="submit" id="talk_send">Sendmessage</button>
+                    </form>
+                </div>
+                <div class="success-send" id="success">Thanks for reaching out! We'll get back to you as soon as possible.</div>
+            </div>    
+        </section>
+    </main>
+    <footer></footer>
 <script src="js/contact.js"></script>
+
 
 </body>
 </html>
