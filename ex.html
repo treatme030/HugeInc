@@ -7,7 +7,23 @@
     <title>Document</title>
 </head>
 <style>
- 
+    #clock {
+        
+        width: 400px;
+        height: 100px;
+        color: rgb(150, 209, 191);
+        background-color: rgb(250, 238, 245);
+        border: 5px solid rgb(150, 209, 191);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bolder;
+        box-sizing: border-box;
+        padding: 0 50px;
+    }
 </style>
 <body>
     <h1>브라우저 디지털 시간</h1>
@@ -53,7 +69,7 @@ document.getElementById('utc').innerHTML = utcHour;
                         hour = pm
                     }
                 }
-        document.getElementById('clock').innerHTML = `${year}년 ${month+1}월 ${date}일 ${dayStr[day]}요일 ${hour}:${minute}분:${second}초`;
+        document.getElementById('clock').innerHTML = `${year}년 ${month+1}월 ${date}일 ${dayStr[day]}요일 ${hour} : ${minute}분 : ${second}초`;
     }
     </script>
 </body>
