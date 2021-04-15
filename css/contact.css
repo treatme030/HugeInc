@@ -26,7 +26,7 @@
 #hero_title {
     position: absolute;
     bottom: 100px;
-    left: 250px;
+    left: 12.65823%;
     font-size: 160px;
     font-weight: 900;
 }
@@ -40,7 +40,7 @@
 }
 
 .inner {
-    width: 75.972%;
+    width: 74.68354%;
     padding-top: 140px;
     margin: 0 auto 200px;
     display: flex;
@@ -57,6 +57,7 @@
     font-weight: 700;
     border-top: 1px solid #fff;
     line-height: 30px;
+    padding-top: 10px;
 }
 
 .right {
@@ -81,7 +82,7 @@
 .contact-wrap .contact-item {
     width: 48.71795%;
     margin-top: 100px;
-    font-family: serif;
+    font-family: 'Galaxie-Book';
     font-size: 1.125rem;
     letter-spacing: -.01719rem;
     line-height: 1.88889;
@@ -127,7 +128,7 @@
 }
 
 .talk-box input {
-    font-family: serif;
+    font-family: 'HugeGothic-Bold';
     font-size: 22px;
     width: 100%;
     height: 48px;
@@ -165,13 +166,13 @@
 .talk-box textarea {
     width: 100%;
     height: 92px;
-    font-family: serif;
+    font-family: 'HugeGothic-Bold';
     font-size: 22px;
     padding: 16px;
 }
 
 .notice {
-    font-family: serif;
+    font-family: 'HugeGothic-Bold';
     color: rgb(128,128,128);
     font-size: 16px;
     margin-bottom: 48px;
@@ -259,7 +260,7 @@ button {
 
 .office-box {
     position: relative;
-    font-family: sans-serif;
+    font-family: 'HugeGothic-Bold';
     padding: 115px 70px 30px;
     width: 33.33333%;
     background-color: #161616;
@@ -270,6 +271,10 @@ button {
     flex-direction: column;
     flex-shrink: 0;
     transition: .3s;
+}
+
+.office-box:nth-child(3n) {
+    border-right: 0;
 }
 
 .office-box:hover {
@@ -283,7 +288,6 @@ button {
 .office-city {
     margin-bottom: 50px;
     font-size: 2.75rem;
-    font-weight: bolder;
     letter-spacing: 0rem;
     line-height: 1.09091;
 }
@@ -295,19 +299,22 @@ button {
     line-height: 1.25;
 }
 
-#hours {
+.hours {
+    font-family: 'Galaxie-Book';
     font-size: 1.125rem;
     letter-spacing: -.01719rem;
     line-height: 1.88889;
 }
 
 .office-phone {
+    font-family: 'Galaxie-Book';
     font-size: 1.125rem;
     letter-spacing: -.01719rem;
     line-height: 1.88889;
 }
 
 .office-email {
+    font-family: 'Galaxie-Book';
     min-height: 100px;
     font-size: 1.125rem;
     letter-spacing: -.01719rem;
@@ -351,6 +358,71 @@ button {
     .office-box.night .time-sign_night {
         opacity: 1;
     }
+
+/* Latest-news */
+.latest-news {
+    position: relative;
+    padding: 200px 0;
+    background-image: url(../img/m1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.latest-news:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.latest-news-wrap {
+    position: relative;
+    display: flex;
+}
+
+.magenta-title {
+    display: inline-block;
+    width: 18.98734%;
+    padding-bottom: 18.98734%;
+    margin: 0 1.25% 0 12.65824%;
+    background-color: #fff;
+    background-image: url(../img/magenta-hero.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999999;
+    cursor: pointer;
+}
+
+.latest-news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 43.03797%;
+    margin: 0 1.26582% 0 5.06329%;
+    cursor: pointer;
+}
+
+.latest-news-content h3 {
+    font-size: 5rem;
+    letter-spacing: -.125rem;
+    line-height: 1.05;
+}
+
+.latest-news-conten p {
+    font-size: 1.125rem;
+    letter-spacing: -.01719rem;
+    line-height: 1.88889;
+}
+
+
+
 
 
 

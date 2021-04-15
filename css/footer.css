@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    padding: 65px 0 80px;
+    background: #000;
+}
+
+.footer-wrap {
+    width: 74.68354%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+
+

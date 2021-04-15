@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+      font-family: 'Galaxie-Book';
+      src: url(../font/GalaxieCopernicus-Book.woff);
+}
+
+@font-face {
+      font-family: 'HugeGothic-Bold';
+      src: url(../font/HugeGothic-Bold.woff);
+}
+
+
+
 
 body { 
       color:rgb(255,255,255); 
@@ -19,15 +30,22 @@ div {
       background-position: center; 
       background-repeat: no-repeat; }
 
-h1 { font-family: 'Noto Sans KR'; font-size: 64px; line-height: 1.2; font-weight: 700; }
+h1,h2,h3,h4,h5,h6 {
+      font-family: 'HugeGothic-Bold';
+}  
+p {
+      font-family: 'Galaxie-Book';   
+}    
 
-h2 { font-family: 'Noto Sans KR'; font-size: 50px; line-height: 1.2; font-weight: 500; }
+h1 { font-size: 64px; line-height: 1.2; font-weight: 700; }
 
-h3 { font-family: 'Noto Sans KR'; font-size: 26px; line-height: 1.4; font-weight: 400; }
+h2 { font-size: 50px; line-height: 1.2; font-weight: 500; }
 
-h4 { font-family: 'Noto Sans KR'; font-size: 19.2px; line-height: 1.4; font-weight: 400; }
+h3 { font-size: 26px; line-height: 1.4; font-weight: 400; }
 
-p { font-family: 'Noto Sans KR'; font-size: 16px; line-height: 1.5; font-weight: 400; }
+h4 { font-size: 19.2px; line-height: 1.4; font-weight: 400; }
+
+p {font-size: 16px; line-height: 1.5; font-weight: 400; }
 
 /* Tablet PC Landscape 가로 */
 
