@@ -111,6 +111,9 @@ officeBoxArray.forEach((box, index) => {
     if(timeArray[index] < 0){
         timeArray[index] += 24;
     }
+    if(timeArray[index] >= 24){
+        timeArray[index] -= 24;
+    }
     //ampm 구하기
     if(timeArray[index] >= 0 && timeArray[index] < 12){
         AmPm = 'AM';
@@ -125,21 +128,27 @@ officeBoxArray.forEach((box, index) => {
         officeBoxArray[index].classList.remove('day');
         officeBoxArray[index].classList.add('night');
     }
-    //12시간제로 변경
-    if (timeArray[index] > 12) { timeArray[index] -= 12; }
-
+    //12시간제로 변경해서 시간 나타내기
+    if (timeArray[index] > 12){ 
+        timeArray[index] -= 12; 
+    }
     hours[index].innerHTML = `${timeArray[index]}:${utcMinutes} ${AmPm}`;
     hours[index].innerHTML = `${timeArray[index]}:${utcMinutes} ${AmPm}`;
 });
 
-//리셋될 경우 latest-news 배경이미지 변경
-let magentaBg = ['m1.jepg','m2.jpg','m3.jpg'];
-let magentaTitle = ["Predictions for the Year Ahead" ,"Should Logo Designers Fear the Internet","Fighting for Progress."];
-let magentaDes = ['Huge strategists, technologists, UX designers, and creatives weigh in on what’s really relevant in 2019.', 'How the New York Civil Liberties Union and Huge harnessed the power of retro technology to publicize the limits of arcane legislation.','merong']
+//리셋될 경우 latest-news 배경이미지와 텍스트 랜덤으로 변경
+let magentaBgArray = ['Predictions_for_the_Year_Ahead.jpeg','Screen_Shot_2018-08-07_at_10.51.41_AM.png','frame_0_delay-0.2s.jpg',
+                    'HugeincTile_template_1918x763_copy.jpg','HugeincTile5_template_1918x763.jpg'];
+let magentaTitleArray = ['Predictions for the Year Ahead' ,'Voice Assistants Need Ethics.','I Invented a Smart Tampon Dispenser',
+                        'Fighting for Progress.',"Let's get emotional."];
+let magentaDesArray = ['Huge strategists, technologists, UX designers, and creatives weigh in on what’s really relevant in 2019.',
+                    'It’s the responsibility of designers to craft strong brand personalities with values.',
+                    'Because who wants coin slots, broken knobs, and period shame?',
+                    'How the New York Civil Liberties Union and Huge harnessed the power of retro technology to publicize the limits of arcane legislation.',
+                    'The opportunity for brands to forge deep relationships with their users has never been greater.']
+let randomNum = Math.floor(Math.random()*magentaBgArray.length);
 
-let randomNum = Math.floor(Math.random()*magentaBg.length);
-document.getElementsByClassName('latest-news')[0].style.backgroundImage = `'url(../${magentaBg[randomNum]}'`;
-
-document.getElementsByClassName('title')[0].innerHTML = magentaTitle[randomNum];
-document.getElementsByClassName('dese')[0].innerHTML = magentaDes[randomNum];
+document.getElementById('latest-news').style.backgroundImage = `url(../img/${magentaBgArray[randomNum]})`;
+document.getElementById('title').innerHTML = magentaTitleArray[randomNum];
+document.getElementById('dese').innerHTML = magentaDesArray[randomNum];
 
