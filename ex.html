@@ -56,20 +56,17 @@ document.getElementById('utc').innerHTML = utcHour;
         let hour = today.getHours();
         let minute = today.getMinutes();
         let second = today.getSeconds();
-
+        let ampm;
         if(hour >= 0 && hour < 12) {
-                    let am = `오전${hour}시`;
-                        hour = am;
-                    } else if(hour >= 12 && hour <= 24) {
-                    if(hour == 12){
-                        let noon = `정오${hour}시`;
-                        hour = noon;
-                    } else {
-                        let pm = `오후${hour - 12}시`;
-                        hour = pm
-                    }
-                }
-        document.getElementById('clock').innerHTML = `${year}년 ${month+1}월 ${date}일 ${dayStr[day]}요일 ${hour} : ${minute}분 : ${second}초`;
+            ampm = `오전${hour}시`;
+        } else if(hour >= 12 && hour <= 24) {
+            if(hour == 12){
+                ampm = `정오${hour}시`;
+            } else {
+                ampm = `오후${hour - 12}시`;
+            }
+        }
+        document.getElementById('clock').innerHTML = `${year}년 ${month+1}월 ${date}일 ${dayStr[day]}요일 ${ampm} : ${minute}분 : ${second}초`;
     }
     </script>
 </body>
