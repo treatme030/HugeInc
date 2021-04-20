@@ -1,8 +1,20 @@
-//반복적으로 텍스트 변경하기
-var titleText = ['Hello.','Hola.','EI.','Ola.','Buenas.','你好.','Ello.','Aye.','안녕.'];
-var titleTextNum = 0;
+//h-logo 버튼 클릭 이벤트
+let hLogo = document.getElementById('h-logo-box');
+let hLogoPink = document.getElementById('h-logo-box-open');
+let wrap = document.getElementById('wrap');
 
-var titleI = setInterval (titleChange, 1000);
+hLogo.addEventListener('click', function(){
+    wrap.classList.add('open');
+});
+hLogoPink.addEventListener('click', function(){
+    wrap.classList.remove('open');
+});
+
+//반복적으로 텍스트 변경하기
+let titleText = ['Hello.','Hola.','EI.','Ola.','Buenas.','你好.','Ello.','Aye.','안녕.'];
+let titleTextNum = 0;
+
+let titleI = setInterval (titleChange, 1000);
 
 function titleChange(){
     titleTextNum++;
