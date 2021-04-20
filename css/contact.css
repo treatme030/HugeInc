@@ -55,11 +55,11 @@ body {
     }
 
 /* Main */
-#main-wrap {
+#content-wrap {
     transform: translateY(0);
     transition: transform 0.3s;
 }
-    #wrap.open #main-wrap {
+    #wrap.open #content-wrap {
         transform: translateY(440px);
     }
 
