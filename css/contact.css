@@ -1,14 +1,45 @@
+html,
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    line-height: 1.5;
+    background: #F4F4F4; 
+}
 
-.gnb_logo_wrap { 
+/* H-logo */
+
+.logo { 
     width: 74px; 
     height: 74px; 
     background-color: rgb(255,255,255); 
     position: fixed; 
     top:50px; 
     left:calc(50% - 37px);
+    z-index: 150;
 }
 
-.gnb_logo { 
+#h-logo-box-open {
+    display: none;
+    background-color: transparent;
+}
+#h-logo-box-open .h-logo-pink {
+    fill: #EA178C;
+    height: 24px;
+    width: 60px;
+}
+    
+
+#h-logo-box:hover,
+#h-logo-box:hover .h-logo {
+    background-color: #000;
+    fill: #fff;
+}
+
+#h-logo-box .h-logo { 
     width: 24px; 
     height: 28px; 
     position: absolute; 
@@ -16,6 +47,23 @@
     transform: translate(-50%, -50%);
 }
 
+    #wrap.open #h-logo-box-open {
+        display: block;
+    }
+    #wrap.open #h-logo-box {
+        display: none;
+    }
+
+/* Main */
+#main-wrap {
+    transform: translateY(0);
+    transition: transform 0.3s;
+}
+    #wrap.open #main-wrap {
+        transform: translateY(440px);
+    }
+
+/* Hero */
 .hero_wrap { 
     position: relative;
     height: 80vh;
@@ -32,7 +80,6 @@
 }
 
 /* Hello */
-
 #hello {
     width: 100%;
     background-color: #000;
@@ -42,8 +89,12 @@
 .inner {
     width: 74.68354%;
     padding-top: 140px;
-    margin: 0 auto 200px;
+    margin: 0 auto;
     display: flex;
+}
+
+.inner-hello {
+    padding-bottom: 200px;
 }
 
 .left {
@@ -98,7 +149,6 @@
 }
 
 /* Let's talk. */
-
 #talk {
     width: 100%;
     background-color: #fff;
@@ -128,7 +178,7 @@
 }
 
 .talk-box input {
-    font-family: 'HugeGothic-Bold';
+    font-family: 'Galaxie-Book';
     font-size: 22px;
     width: 100%;
     height: 48px;
@@ -172,9 +222,10 @@
 }
 
 .notice {
-    font-family: 'HugeGothic-Bold';
+    font-family: 'Galaxie-Book';
     color: rgb(128,128,128);
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 20px;
     margin-bottom: 48px;
 }
 
@@ -248,12 +299,15 @@ button {
     display: block;
 }
 
-/* office */
+/* Office */
 #office {
-    padding-bottom: 100px;
+    background-color: #000;
+}
+
+#office .office-wrap {
+    padding: 100px 0;
     width: 89.87342%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -327,7 +381,6 @@ button {
     bottom: 30px;
     height: 35px;
     width: 35px;
-    
 }
 
 .time-sign_day {
@@ -421,13 +474,138 @@ button {
     line-height: 1.88889;
 }
 
+/* Global-nav */
+#global-nav-wrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: #F4F4F4;
+    transition: height 0.3s;
+}
 
+#global-nav-wrap .global-nav-list {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    right: 0;
+    width: 87.34177%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
 
+#global-nav-wrap .global-nav-list .global-nav-item {
+    max-width: 190px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 190px;
+    text-align: center;
+    color: #000;
+}
 
+.global-nav-item .global-nav-item-label {
+    font-family: 'HugeGothic-Bold';
+    font-size: 36px;
+    line-height: 32px;
+    transition: color 0.2s;
+    display: none;
+}
 
+.global-nav-item .global-nav-item-des {
+    font-size: .875rem;
+    letter-spacing: -0.04063rem;
+    line-height: 1.42857;
+    padding-top: 4px;
+    display: none;
+}
 
+.global-nav-item .global-nav-item-des:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 48px;
+    margin: 35px auto 0;
+    background-color: #000;
+}
 
+#global-nav-wrap .gobal-nav-social {
+    position: absolute;
+    top: 345px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
 
+#global-nav-wrap .gobal-nav-social span {
+    font-size: 0.875rem;
+    letter-spacing: -0.04063rem;
+    line-height: 1.42857;
+    color: #000;
+    vertical-align: top;
+}
 
+#global-nav-wrap .gobal-nav-social .social-link {
+    font-family: 'HugeGothic-Bold';
+    font-weight: bold;
+    line-height: 1.43;
+    padding-left: 0.3rem;
+    color: #000;
+    transition: color 0.2s;
+}
+
+#global-nav-wrap .gobal-nav-social .social-link:after {
+    content:'.';
+    color: #EA178C;
+}
+
+#global-nav-wrap .gobal-nav-social .social-link:hover,
+.global-nav-item .global-nav-item-label:hover {
+    color: #EA178C;
+}
+
+    #wrap.open #global-nav-wrap {
+        height: 440px;
+    }
+    #wrap.open .global-nav-item .global-nav-item-label,
+    #wrap.open .global-nav-item .global-nav-item-des,
+    #wrap.open .gobal-nav-social {
+        display: block;
+    }
+
+/* Frame */
+#framebox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background-color: transparent;
+    border-top: 0px solid #F4F4F4;
+    border-left: 0px solid #F4F4F4;
+    border-right: 0px solid #F4F4F4;
+    border-bottom: 0px solid #F4F4F4;
+    z-index: 100;
+    transition: border 0.25s;
+}
+
+/* hover 되었을 때 변경할 요소가 형제인경우 '~' 사용 */
+#h-logo-box:hover ~ #framebox {
+    border-top: 90px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    border-bottom: 50px solid #F4F4F4;
+}
+
+    #wrap.open #framebox {
+        border-left: 50px solid #F4F4F4;
+        border-right: 50px solid #F4F4F4;
+    }
 
 

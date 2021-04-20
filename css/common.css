@@ -13,17 +13,21 @@
 
 body { 
       color:rgb(255,255,255); 
-      font-family: 'Noto Sans KR'; 
+      font-family: 'Galaxie-Book'; 
       font-size: 16px;
       -webkit-font-smoothing: antialiased; 
-      background-color: rgb(0,0,0); }
+      background: #F4F4F4; 
+}
 
 a { 
       text-decoration: none; 
       color:rgb(255,255,255); 
 }
 
-button { cursor: pointer; }
+button { 
+      cursor: pointer;
+      outline: none; 
+}
 
 div { 
       background-size: cover; 
