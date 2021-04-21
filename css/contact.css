@@ -31,7 +31,12 @@ body {
     height: 24px;
     width: 60px;
 }
-    
+
+#h-logo-box {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+}
 
 #h-logo-box:hover,
 #h-logo-box:hover .h-logo {
@@ -52,6 +57,10 @@ body {
     }
     #wrap.open #h-logo-box {
         display: none;
+    }
+    #h-logo-box.hidden {
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
 /* Main */

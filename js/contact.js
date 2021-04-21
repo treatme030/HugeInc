@@ -1,14 +1,37 @@
-//h-logo 버튼 클릭 이벤트
-let hLogo = document.getElementById('h-logo-box');
+//h-logo 버튼 이벤트
+let hLogoBlack = document.getElementById('h-logo-box');
 let hLogoPink = document.getElementById('h-logo-box-open');
 let wrap = document.getElementById('wrap');
 
-hLogo.addEventListener('click', function(){
+//로고 블랙버튼 클릭 이벤트
+hLogoBlack.addEventListener('click', function(){
     wrap.classList.add('open');
 });
+//로고 핑크버튼 클릭 이벤트
 hLogoPink.addEventListener('click', function(){
     wrap.classList.remove('open');
 });
+
+//스크롤 방향에 따른 h-logo 이벤트
+let beforeScrollY = 0; //이전 스크롤 양
+window.addEventListener('scroll', scrollDirection);
+
+function scrollDirection(){
+    let standard = 50;
+    //스크롤 양과 logo의 top값 비교하여 logo 나타내기
+    if(window.scrollY > standard){
+        hLogoBlack.classList.add('hidden');
+    } else {
+        hLogoBlack.classList.remove('hidden');
+    }
+    //스크롤 방향에 따라 logo 나타내기
+    if(window.scrollY > beforeScrollY){//스크롤 방향 아래로
+        hLogoBlack.classList.add('hidden');
+    } else {//스크롤 방향 위로
+        hLogoBlack.classList.remove('hidden');
+    }
+    beforeScrollY = window.scrollY;//이전 스크롤된 양을 현재 스크롤된 양과 비교할 수 있게
+}
 
 //반복적으로 텍스트 변경하기
 let titleText = ['Hello.','Hola.','EI.','Ola.','Buenas.','你好.','Ello.','Aye.','안녕.'];
@@ -24,8 +47,7 @@ function titleChange(){
     document.getElementById('hero_title').innerHTML = titleText[titleTextNum];
 }
 
-//input요소 이벤트
-
+//input요소에 일어날 다양한 이벤트
 let talkItem = document.getElementsByClassName('talk-item');
 let talkItemArray = [...talkItem];
 
@@ -64,6 +86,7 @@ document.getElementById('talk_send').addEventListener('click', function(e){
     });
 
     //입력 값이 모두 입력된 경우 성공메세지 출력
+    //error 클래스가 붙은 요소의 배열 길이가 0일 때
     if(document.getElementsByClassName('error').length == 0){
         document.getElementById('talkRight').style.display = 'none';
         document.getElementById('success').style.display = 'block';
@@ -162,5 +185,5 @@ let randomNum = Math.floor(Math.random()*magentaBgArray.length);
 
 document.getElementById('latest-news').style.backgroundImage = `url(../img/${magentaBgArray[randomNum]})`;
 document.getElementById('title').innerHTML = magentaTitleArray[randomNum];
-document.getElementById('dese').innerHTML = magentaDesArray[randomNum];
+document.getElementById('des').innerHTML = magentaDesArray[randomNum];
 
